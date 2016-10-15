@@ -1,0 +1,19 @@
+doctype html
+
+mixin basically_a_function(data)
+    ul(name='myList')
+    if data 
+        // checking if the object exists ('defensive' coding)
+        each someObject in data
+            li.someObject: p= someObject.stringValue + " last checked in at " + someObject.numberField
+            hr
+    else
+        li.someObject: p= "There is no data"
+
+
+html(lang="en")
+    head
+        title Some heading
+    body
+        h1 Some heading
+        +basically_a_function(data)
