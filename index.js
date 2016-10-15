@@ -4,7 +4,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 // views is directory for all template files
 app.set('views', __dirname + '/views/');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.use('/', express.static(__dirname + '/public'));
 
 app.get('/forMaddie', function (request, response) {

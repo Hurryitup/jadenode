@@ -1,0 +1,13 @@
+mixin people()
+        ol(name="people list")
+                li.person: p="Tati"
+                li.person: p="Maddie"
+                li.person: p="Emily"
+
+link(href="stylesheets/style.css", rel="stylesheet")
+html(lang="en")
+    head
+        title Latest checkins
+    body
+        h1 Latest Checkins
+        +people
